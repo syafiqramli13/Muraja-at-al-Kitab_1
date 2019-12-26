@@ -18,7 +18,7 @@ import {Actions} from 'react-native-router-flux';
 import {db} from '../config/db';
 import {updateStudent} from '../services/DataService';
 
-let studentsRef = db.ref('/students');
+let studentsRef = db.ref('/books');
 
 export default class BookReview extends Component {
   render() {

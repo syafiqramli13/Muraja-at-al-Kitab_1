@@ -16,57 +16,71 @@ import {
   Picker,
   IconNB,
 } from 'native-base';
-import {addStudent} from '../services/DataService';
+import {addBook} from '../services/DataService';
 
-export default class NewScreen extends Component {
+export default class AddBook extends Component {
   constructor() {
     super();
     this.state = {
-      name: null,
-      matricno: null,
-      major: '',
-      year: 0,
-      status: '',
+      booktitle: null,
+      barcode: null,
+      category: '',
+      author: '',
+      publisher: '',
+      year: '',
+      imagebook: '',
     };
   }
 
-  setName = value => {
-    this.setState({name: value});
+  setBookTitle = value => {
+    this.setState({booktitle: value});
   };
 
-  setMatricNo = value => {
-    this.setState({matricno: value});
+  setBarcode = value => {
+    this.setState({barcode: value});
   };
 
-  selectMajor = value => {
-    this.setState({major: value});
+  selectCategory = value => {
+    this.setState({category: value});
   };
 
-  selectYear = value => {
+  setAuthor = value => {
+    this.setState({author: value});
+  };
+
+  setPublisher = value => {
+    this.setState({publisher: value});
+  };
+
+  setYear = value => {
     this.setState({year: value});
   };
 
-  selectStatus = value => {
-    this.setState({status: value});
+  setImageBook = value => {
+    this.setState({imagebook: value});
   };
 
   saveData = () => {
     if (
-      this.state.name &&
-      this.state.matricno &&
-      this.state.major &&
+      this.state.booktitle &&
+      this.state.barcode &&
+      this.state.category &&
+      this.state.author &&
+      this.state.publisher &&
       this.state.year &&
-      this.state.status
+      this.state.imagebook
     ) {
-      if (isNaN(this.state.matricno)) {
-        Alert.alert('Status', 'Invalid Matric No!');
+      if (isNaN(this.state.barcode)) {
+        Alert.alert('Status', 'Invalid Barcode No!');
       } else {
-        addStudent(
-          this.state.name,
-          this.state.matricno,
-          this.state.major,
+        addBook(
+          this.state.booktitle,
+          this.state.barcode,
+          this.state.category,
+          this.state.author,
+          this.state.publisher,
           this.state.year,
-          this.state.status,
+          this.state.imagebook,
         );
       }
     } else {
@@ -88,63 +102,54 @@ export default class NewScreen extends Component {
             Add Book Details
           </Text>
           <Form>
-            <Item fixedLabel last>
-              <Label>Name</Label>
-              <Input onChangeText={this.setName} />
+            <Item fixedLabel rounded style={{marginBottom: 5}} last>
+              <Label>Book Title</Label>
+              <Input onChangeText={this.setBookTitle} />
             </Item>
-            <Item fixedLabel last>
-              <Label>Matric No</Label>
-              <Input onChangeText={this.setMatricNo} />
+            <Item fixedLabel rounded style={{marginBottom: 5}} last>
+              <Label>Barcode No </Label>
+              <Input onChangeText={this.setBarcode} />
             </Item>
-            <Item fixedLabel picker last>
-              <Label>Major</Label>
-              <Picker
-                mode="dropdown"
-                iosIcon={<Icon name="arrow-down" />}
-                style={{width: undefined}}
-                placeholder="Select Major"
-                placeholderStyle={{color: '#bfc6ea'}}
-                placeholderIconColor="#007aff"
-                selectedValue={this.state.major}
-                onValueChange={this.selectMajor}
-                Title="Major">
-                <Picker.Item label="BIT" value="BIT" />
-                <Picker.Item label="BCS" value="BCS" />
-              </Picker>
+            <Item fixedLabel rounded style={{marginBottom: 5}} last>
+              <Label>Author</Label>
+              <Input onChangeText={this.setAuthor} />
             </Item>
-
-            <Item fixedLabel picker last>
+            <Item fixedLabel rounded style={{marginBottom: 5}} last>
+              <Label>Publisher</Label>
+              <Input onChangeText={this.setPublisher} />
+            </Item>
+            <Item fixedLabel rounded style={{marginBottom: 5}} last>
               <Label>Year</Label>
+              <Input onChangeText={this.setYear} />
+            </Item>
+            <Item fixedLabel picker regular style={{marginBottom: 5}} last>
+              <Label>Category</Label>
               <Picker
-                mode="dropdown"
-                iosIcon={<Icon name="arrow-down" />}
-                style={{width: undefined}}
-                placeholder="Select Year"
+                // mode="dropdown"
+                // iosIcon={<Icon name="arrow-down" />}
+                style={{width: 120}}
+                placeholder="Select Category"
                 placeholderStyle={{color: '#bfc6ea'}}
                 placeholderIconColor="#007aff"
-                selectedValue={this.state.year}
-                onValueChange={this.selectYear}>
-                <Picker.Item label="1" value="1" />
-                <Picker.Item label="2" value="2" />
-                <Picker.Item label="3" value="3" />
-                <Picker.Item label="4" value="4" />
+                selectedValue={this.state.category}
+                onValueChange={this.selectCategory}
+                Title="Category">
+                <Picker.Item label="Education" value="Education" />
+                <Picker.Item label="Business" value="Business" />
+                <Picker.Item label="Mystery" value="Mystery" />
+                <Picker.Item label="Fantasy" value="Fantasy" />
+                <Picker.Item label="Horror" value="Horror" />
+                <Picker.Item label="Romance" value="Romance" />
+                <Picker.Item label="History " value="History" />
+                <Picker.Item label="Science" value="Science" />
+                <Picker.Item label="Journal" value="Journal" />
+                <Picker.Item label="Religion" value="Religion" />
+                <Picker.Item label="Biography" value="Biography" />
               </Picker>
             </Item>
-
-            <Item fixedLabel picker last>
-              <Label>Status</Label>
-              <Picker
-                mode="dropdown"
-                iosIcon={<Icon name="arrow-down" />}
-                style={{width: undefined}}
-                placeholder="Select Status"
-                placeholderStyle={{color: '#bfc6ea'}}
-                placeholderIconColor="#007aff"
-                selectedValue={this.state.status}
-                onValueChange={this.selectStatus}>
-                <Picker.Item label="Active" value="Active" />
-                <Picker.Item label="Inactive" value="Inactive" />
-              </Picker>
+            <Item fixedLabel rounded style={{marginBottom: 5}} last>
+              <Label>Image Book</Label>
+              <Input onChangeText={this.setImageBook} />
             </Item>
           </Form>
 

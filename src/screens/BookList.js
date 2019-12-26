@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Actions} from 'react-native-router-flux';
-import {removeStudent} from '../services/DataService';
+import {removeBook} from '../services/DataService';
 import {Alert} from 'react-native';
 import {
   Container,
@@ -14,31 +14,31 @@ import {
   IconNB,
 } from 'native-base';
 import {db} from '../config/db';
-import StudentList from '../components/StudentList';
+import BookAtBooklist from '../components/BookAtBooklist';
 import * as firebase from 'firebase';
 
-let studentsRef = db.ref('/students');
+let booksRef = db.ref('/books');
 
 export default class ListScreen extends Component {
   constructor() {
     super();
     this.state = {
-      students: [],
+      books: [],
     };
   }
 
   componentDidMount() {
-    studentsRef.on('value', snapshot => {
+    booksRef.on('value', snapshot => {
       let data = snapshot.val();
       if (data) {
         let firebaseData = Object.values(data);
-        this.setState({students: firebaseData});
-        console.log(this.state.students);
+        this.setState({books: firebaseData});
+        console.log(this.state.books);
       }
     });
   }
 
-  deleteConfirmation = matricno => {
+  deleteConfirmation = barcode => {
     Alert.alert(
       'Status',
       'Are you sure you want to delete this student?',
@@ -48,7 +48,7 @@ export default class ListScreen extends Component {
           onPress: () => console.log('Cancel Pressed'),
           style: 'cancel',
         },
-        {text: 'OK', onPress: () => removeStudent(matricno)},
+        {text: 'OK', onPress: () => removeBook(barcode)},
       ],
       {cancelable: false},
     );
@@ -87,18 +87,19 @@ export default class ListScreen extends Component {
             }}>
             Book List
           </Text>
+
           <List vertical={true}>
-            <StudentList
-              students={this.state.students}
-              onPress={matricno => {
-                Actions.BookReview({matricno: matricno});
+            <BookAtBooklist
+              books={this.state.books}
+              onPress={barcode => {
+                Actions.BookReview({barcode: barcode});
               }}
-              onLongPress={matricno => {
-                this.deleteConfirmation(matricno);
+              onLongPress={barcode => {
+                this.deleteConfirmation(barcode);
               }}
             />
           </List>
-          <Text>{this.props.matricno}</Text>
+          <Text>{this.props.barcode}</Text>
         </Content>
 
         <Footer>

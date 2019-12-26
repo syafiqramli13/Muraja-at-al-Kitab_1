@@ -1,39 +1,59 @@
 import {db} from '../config/db';
 import {Actions} from 'react-native-router-flux';
 
-export const addStudent = (name, matricno, major, year, status) => {
-  db.ref('/students')
-    .child(matricno)
+export const addBook = (
+  booktitle,
+  barcode,
+  category,
+  author,
+  publisher,
+  year,
+  imagebook,
+) => {
+  db.ref('/books')
+    .child(barcode)
     .set(
       {
-        name: name,
-        matricno: matricno,
-        major: major,
+        booktitle: booktitle,
+        barcode: barcode,
+        category: category,
+        author: author,
+        publisher: publisher,
         year: year,
-        status: status,
+        imagebook: imagebook,
       },
       () => Actions.BookList(),
     );
 };
 
-export const updateStudent = (name, matricno, major, year, status) => {
-  db.ref('/students')
-    .child(matricno)
+export const updateStudent = (
+  booktitle,
+  barcode,
+  category,
+  author,
+  publisher,
+  year,
+  imagebook,
+) => {
+  db.ref('/books')
+    .child(barcode)
     .update(
       {
-        name: name,
-        matricno: matricno,
-        major: major,
+        booktitle: booktitle,
+        barcode: barcode,
+        category: category,
+        author: author,
+        publisher: publisher,
         year: year,
-        status: status,
+        imagebook: imagebook,
       },
       () => Actions.BookList(),
     );
 };
 
-export const removeStudent = matricno => {
-  db.ref('/students')
-    .child(matricno)
+export const removeBook = barcode => {
+  db.ref('/books')
+    .child(barcode)
     .remove();
   Actions.BookList();
 };
