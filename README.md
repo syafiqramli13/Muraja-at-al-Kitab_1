@@ -70,4 +70,14 @@ Functionalities
 
 ### SEQUENCE DIAGRAM
 
-![Login Sequence](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/3.jpeg)
+1. Login Sequence
+   ![Login Sequence](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/3.jpeg)
+
+2. Logout Sequence
+   ![Logout Sequence](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/1.jpeg)
+
+3. Sign Up Sequence
+   ![Sign Up Sequence](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/2.jpeg)
+
+4. Book Review Sequence
+   ![Book Review Sequence](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/4.jpeg)
