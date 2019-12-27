@@ -63,7 +63,7 @@ export default class CodeScanner extends Component {
     }
   }
   render() {
-    // let displayModal;
+    let displayModal;
     //If qrvalue is set then return this view
     if (!this.state.openScanner) {
       return (
@@ -72,14 +72,14 @@ export default class CodeScanner extends Component {
           <Text style={styles.simpleText}>
             {this.state.qrvalue ? 'Scanned QR Code: ' + this.state.qrvalue : ''}
           </Text>
-
+          {/* 
           {this.state.qrvalue.includes('http') ? (
             <TouchableHighlight
               onPress={() => this.onOpenlink()}
               style={styles.button}>
               <Text style={{color: '#FFFFFF', fontSize: 12}}>Open Link</Text>
             </TouchableHighlight>
-          ) : null}
+          ) : null} */}
 
           <TouchableHighlight
             onPress={() => this.onOpneScanner()}

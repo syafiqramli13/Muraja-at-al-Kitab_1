@@ -8,7 +8,7 @@ import BookReview from './src/screens/BookReview';
 import AddBook from './src/screens/AddBook';
 import AddReview from './src/screens/AddReview';
 import CodeScanner from './src/screens/codescanner';
-// import ImageUpload from './src/screens/imageupload';
+// import ImageUpload from './src/components/imageupload';
 
 export default class App extends Component {
   render() {
@@ -27,7 +27,7 @@ export default class App extends Component {
             component={GetStart}
             left={() => null}
             title="Muraja'at al-Kitab"
-            // initial={true}
+            initial={true}
           />
           <Scene
             key="LoginScreen"
@@ -47,7 +47,7 @@ export default class App extends Component {
             component={BookList}
             left={() => null}
             title="Muraja'at Al-Kitab"
-            initial={true}
+            // initial={true}
           />
           <Scene
             key="BookReview"

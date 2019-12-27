@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {Actions} from 'react-native-router-flux';
-import {Alert, StyleSheet} from 'react-native';
+import {Alert, StyleSheet, View, Image} from 'react-native';
 import {
   Container,
   Content,
@@ -64,10 +64,21 @@ export default class LoginScreen extends Component {
               fontWeight: 'bold',
               marginTop: 20,
             }}>
-            Sign In
+            Log In
           </Text>
+          <View style={{alignItems: 'center'}}>
+            <Image
+              source={require('../images/loginGirl.png')}
+              style={{
+                width: 150,
+                height: 150,
+                margin: 20,
+              }}
+            />
+          </View>
+
           <Form>
-            <Item floatingLabel last>
+            <Item fixedLabel rounded last style={{marginBottom: 5}}>
               <Label>Email</Label>
               <Input
                 autoCapitalize="none"
@@ -75,7 +86,7 @@ export default class LoginScreen extends Component {
                 onChangeText={this.setEmail}
               />
             </Item>
-            <Item floatingLabel last>
+            <Item fixedLabel rounded last style={{marginBottom: 5}}>
               <Label>Password</Label>
               <Input
                 secureTextEntry={true}
@@ -88,27 +99,29 @@ export default class LoginScreen extends Component {
 
           <Button
             rounded
-            success
             block
+            success
             style={{marginTop: 50}}
             onPress={this.getLogin}>
             <Text alignItems="center" style={{fontWeight: 'bold'}}>
-              Sign In
+              Log In
             </Text>
           </Button>
-          {/* <Button
-            bordered
-            info
-            small
-            style={{marginTop: 20}}
-            onPress={() => {
-              Actions.SignupScreen();
-            }}>
-            <Text>Sign Up</Text>
-          </Button> */}
+
+          <View style={{alignItems: 'center'}}>
+            <Button
+              transparent
+              small
+              style={{marginTop: 10}}
+              onPress={() => {
+                Actions.SignupScreen();
+              }}>
+              <Text>Sign Up now!</Text>
+            </Button>
+          </View>
         </Content>
 
-        <Footer>
+        {/* <Footer>
           <FooterTab>
             <Button
               vertical
@@ -119,7 +132,7 @@ export default class LoginScreen extends Component {
               <Text>Sign Up</Text>
             </Button>
           </FooterTab>
-        </Footer>
+        </Footer> */}
       </Container>
     );
   }

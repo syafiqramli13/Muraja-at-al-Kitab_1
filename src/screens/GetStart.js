@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
 const slides = [
   {
     key: 's1',
-    text: 'Best Recharge offers',
+    text: 'Your personal book review',
     title: 'Book Review',
     image: require('../images/book2.jpg'),
     // {
@@ -105,52 +105,23 @@ const slides = [
   },
   {
     key: 's2',
-    title: 'Flight Booking',
-    text: 'Upto 25% off on Domestic Flights',
-    image: {
-      uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_flight_ticket_booking.png',
-    },
+    title: 'Barcode Scanner',
+    text: 'Scan barcode effortlessly',
+    image: require('../images/barcode-512.png'),
     backgroundColor: '#febe29',
   },
   {
     key: 's3',
-    title: 'Great Offers',
-    text: 'Enjoy Great offers on our all services',
-    image: {
-      uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_discount.png',
-    },
+    title: 'Book Rating',
+    text: 'Rate your enjoyness reading book',
+    image: require('../images/star.png'),
     backgroundColor: '#22bcb5',
   },
   {
     key: 's4',
-    title: 'Best Deals',
-    text: ' Best Deals on all our services',
-    image: {
-      uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_best_deals.png',
-    },
+    title: 'Book List',
+    text: ' Unilimited Book List',
+    image: require('../images/review-removebg-preview.png'),
     backgroundColor: '#3395ff',
-  },
-  {
-    key: 's5',
-    title: 'Bus Booking',
-    text: 'Enjoy Travelling on Bus with flat 100% off',
-    image: {
-      uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_bus_ticket_booking.png',
-    },
-    backgroundColor: '#f6437b',
-  },
-  {
-    key: 's6',
-    title: 'Train Booking',
-    text: ' 10% off on first Train booking',
-    image: {
-      uri:
-        'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_train_ticket_booking.png',
-    },
-    backgroundColor: '#febe29',
   },
 ];

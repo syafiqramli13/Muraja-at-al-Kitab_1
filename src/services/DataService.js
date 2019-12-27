@@ -8,7 +8,7 @@ export const addBook = (
   author,
   publisher,
   year,
-  imagebook,
+  // imagebook,
 ) => {
   db.ref('/books')
     .child(barcode)
@@ -20,12 +20,23 @@ export const addBook = (
         author: author,
         publisher: publisher,
         year: year,
-        imagebook: imagebook,
+        // imagebook: imagebook,
       },
       () => Actions.BookList(),
     );
 };
 
+export const addReview = (Default_Rating, review) => {
+  db.ref('/books')
+    .ref.child(barcode)
+    .set(
+      {
+        Default_Rating: Default_Rating,
+        review: review,
+      },
+      () => Actions.BookList(),
+    );
+};
 export const updateStudent = (
   booktitle,
   barcode,
@@ -33,7 +44,7 @@ export const updateStudent = (
   author,
   publisher,
   year,
-  imagebook,
+  // imagebook,
 ) => {
   db.ref('/books')
     .child(barcode)
@@ -45,7 +56,7 @@ export const updateStudent = (
         author: author,
         publisher: publisher,
         year: year,
-        imagebook: imagebook,
+        // imagebook: imagebook,
       },
       () => Actions.BookList(),
     );

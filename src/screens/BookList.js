@@ -76,7 +76,7 @@ export default class ListScreen extends Component {
 
   render() {
     return (
-      <Container>
+      <Container style={{backgroundColor: '#e2e2e2'}}>
         <Content padder>
           <Text
             style={{
@@ -104,17 +104,17 @@ export default class ListScreen extends Component {
 
         <Footer>
           <FooterTab>
-            <Button vertical onPress={this.goToScanner}>
+            {/* <Button vertical onPress={this.goToScanner}>
               <IconNB name="ios-camera" />
               <Text>Scanner</Text>
+            </Button> */}
+            <Button vertical onPress={this.goToLoginScreen}>
+              <Icon name="log-out" />
+              <Text>Log Out</Text>
             </Button>
             <Button vertical onPress={this.goToAddBook}>
               <Icon name="ios-add-circle-outline" />
               <Text>Add book</Text>
-            </Button>
-            <Button vertical onPress={this.goToLoginScreen}>
-              <Icon name="log-out" />
-              <Text>Log Out</Text>
             </Button>
           </FooterTab>
         </Footer>

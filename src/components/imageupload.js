@@ -11,10 +11,7 @@ export default class ImageUpload extends Component {
   }
   chooseFile = () => {
     var options = {
-      title: 'Select Image',
-      customButtons: [
-        {name: 'customOptionKey', title: 'Choose Photo from Custom Option'},
-      ],
+      title: 'Upload Book Cover',
       storageOptions: {
         skipBackup: true,
         path: 'images',
@@ -58,7 +55,10 @@ export default class ImageUpload extends Component {
             style={{width: 250, height: 250}}
           />
           <Text style={{alignItems: 'center'}}>{this.state.filePath.uri}</Text>
-          <Button title="Choose File" onPress={this.chooseFile.bind(this)} />
+          <Text></Text>
+          <Text></Text>
+          <Text></Text>
+          <Button title="Upload Image" onPress={this.chooseFile.bind(this)} />
         </View>
       </View>
     );

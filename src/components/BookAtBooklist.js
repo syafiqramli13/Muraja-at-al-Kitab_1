@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, ListItem, Left, Right, Icon} from 'native-base';
+import {Text, ListItem, Left, Right, Icon, Thumbnail} from 'native-base';
 import PropTypes from 'prop-types';
 
 export default class BookAtBooklist extends Component {
@@ -19,6 +19,7 @@ export default class BookAtBooklist extends Component {
     return this.props.books.map((data, index) => {
       return (
         <ListItem
+          Thumbnail
           key={index}
           onPress={() => this.onPress(data.barcode)}
           onLongPress={() => this.onLongPress(data.barcode)}>
