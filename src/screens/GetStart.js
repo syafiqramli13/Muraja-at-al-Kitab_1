@@ -97,10 +97,6 @@ const slides = [
     text: 'Your personal book review',
     title: 'Book Review',
     image: require('../images/book2.jpg'),
-    // {
-    //   uri:
-    //     'https://raw.githubusercontent.com/AboutReact/sampleresource/master/intro_mobile_recharge.png',
-    // },
     backgroundColor: '#20d2bb',
   },
   {
