@@ -74,7 +74,7 @@ export default class GetStart extends React.Component {
 
 const styles = StyleSheet.create({
   image: {
-    width: 200,
+    width: 300,
     height: 200,
   },
   text: {
