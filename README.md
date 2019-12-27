@@ -53,30 +53,32 @@ Functionalities
 1. Get Started
    User would be introduced to the app and its features and functionality.
 
-   ![Get Started](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/getstart.jpeg)
+   ![Get Started](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/getstart.jpg)
 
 2. Login Page
    User need to sign in before the Home Page is prompted. If user does not have any account, they need to click to Sign Up button to be redirected to Sign Up page.
 
-   ![login](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/login.jpeg)
+   ![login](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/login.jpg)
 
 3) Book List
    After login, user would be prompted to this screen where the user can see all the books that have been added and reviewed. If the user click on one of the books that is on list, the user will be brought to the 'Review' the user can see the reviews and ratings that have been given to that book.
 
-   ![booklist](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/booklist.jpeg)
+   ![booklist](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/booklist.jpg)
 
 4) Add Book
    The user would need to add the details of the book the user want to add. The barcode need to be scan by the user to add book. The user also need to insert the image of the front cover of the book. After finishing inserting the details and the image of the front cover of the book, the user need to click the 'add book' button and the book will be added into the list of books.
 
-![addbook](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/addbook.jpeg)
+![addbook](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/addbook.jpg)
 
 5. Review
    The screen will be filled with the image of the front cover of the book. under that image would be the details of the book. The reviews that have been made on the books would be here. The user need to click the 'add review' button to add their reviews and ratings of the book.
 
-![addreview](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/addreview.jpeg)
+![review](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/review.jpg)
 
 6. Add Review & Rating
    The title of the book that needed to be review would be pop out. There would be a textbox that require the user to fill it with the user opinion on that book. Besides that, the user need to click the stars underneath that textbox to rate the book from 1 to 5 stars. After that, the user need to click the 'submit' button.
+
+![addreview](https://raw.githubusercontent.com/syafiqramli13/Muraja-at-al-Kitab_1/master/screenshot/addreview.jpg)
 
 ### SEQUENCE DIAGRAM
 
