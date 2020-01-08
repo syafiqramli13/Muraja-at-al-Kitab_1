@@ -1,5 +1,3 @@
-# Muraja-at-al-Kitab
-
 # Muraja-at-al-Kitab_1
 
 ### Group Members (At-Taqwa)
